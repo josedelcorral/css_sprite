@@ -48,9 +48,9 @@ class Sprite
       @output.each do |dest, results|
         results.each do |result|
           f.puts ".#{result[:name]} \{ "
-          f.puts "\tbackground: url('../images/#{dest}') no-repeat #{result[:x]}px #{result[:y]}px;"
-          f.puts "\twidth: #{result[:width]}px;"
-          f.puts "\theight: #{result[:height]}px;"
+          f.puts "\tbackground: url('../images/#{dest}') no-repeat #{result[:x]/10}em \-#{result[:y]/10}em;"
+          f.puts "\twidth: #{result[:width]/10}em;"
+          f.puts "\theight: #{result[:height]/10}em;"
           f.puts "\}"
         end
       end
